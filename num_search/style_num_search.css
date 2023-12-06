@@ -1,0 +1,250 @@
+body {
+    text-align: center;
+}
+
+.image {
+    width: 960px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.left {
+    background: #ffffff;
+    width: 334px;
+    height: 403px;
+    position: absolute;
+    left: 70px;
+    top: 181px;
+    overflow: auto;
+}
+
+.right {
+    background: #ffffff;
+    width: 334px;
+    height: 403px;
+    position: absolute;
+    left: 556px;
+    top: 181px;
+    overflow: auto;
+}
+
+.head_l {
+    vertical-align: middle;
+    text-align: left;
+    background: #728cff;
+    width: 334px;
+    height: 45px;
+    position: absolute;
+    left: 70px;
+    top: 136px;
+    overflow: none;
+    color: #b7c4ff;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.head_r {
+    vertical-align: middle;
+    text-align: left;
+    background: #728cff;
+    width: 334px;
+    height: 45px;
+    position: absolute;
+    left: 556px;
+    top: 136px;
+    overflow: none;
+}
+
+.game_l {
+    background: #ffffff;
+    width: 334px;
+    height: 448px;
+    position: absolute;
+    left: 70px;
+    top: 136px;
+    overflow-y: auto;
+}
+
+.game_r {
+    background: #ffffff;
+    width: 334px;
+    height: 448px;
+    position: absolute;
+    left: 556px;
+    top: 136px;
+    overflow-y: auto;
+}
+
+.language {
+    text-align: left;
+    position: absolute;
+    top: 80px;
+    left: 825px;
+    transform: rotate(-90deg);
+}
+
+.jpn {
+    display: block;
+}
+
+.eng {
+    display: none;
+}
+
+#problems {
+    font-size: 24px;
+    line-height: 120px;
+}
+
+#order {
+    font-size: 24px;
+    text-align: center;
+}
+
+#info_game {
+    font-size: 20px;
+    line-height: 40px;
+    margin-top:10px;
+}
+
+#img_time {
+    margin-top: 10px;
+    width: 334px;
+}
+
+#cleartime {
+    margin-top: 5px;
+    font-size: 40px;
+}
+
+#img_difficulty {
+    margin-top: 10px;
+    width: 334px;
+}
+
+#difficultyname {
+    margin-top: 5px;
+    font-size: 40px;
+}
+
+#img_comparetime {
+    margin-top: 10px;
+    width: 334px;
+}
+
+#comparetime {
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+#img_result {
+    margin-top: 10px;
+    width: 334px;
+}
+
+#img_rank {
+    margin-top: 10px;
+    width: 334px;   
+}
+
+#evaluation {
+    margin-top: 5px;
+    font-size: 40px;
+    color: rgb(225, 42, 186);
+}
+
+.bt-difficulty {
+    background: #ffffff;
+    border: double 2px black;
+    font-size: 30px;
+    font-weight: 550;
+    margin-top: 20px;
+    width: 230px;
+    height: 85px;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+}
+
+.bt-difficulty:hover {
+    background: #ffffff;
+    color: red;
+    border: double 2px red;
+    font-size: 30px;
+    font-weight: 550;
+    margin-top: 20px;
+    width: 230px;
+    height: 85px;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0);
+}
+
+.bt-back {
+    position: absolute;
+    height: 40px;
+    top: 2px;
+    left: 5px;
+}
+
+.bt-back:hover {
+    position: absolute;
+    height: 40px;
+    top: 2px;
+    left: 5px;
+    filter: brightness(2);
+}
+
+.bt-describe {
+    position: absolute;
+    height: 40px;
+    top: 2px;
+    right: 5px;
+}
+
+.bt-describe:hover {
+    position: absolute;
+    height: 40px;
+    top: 2px;
+    right: 5px;
+    filter: brightness(1.2);
+}
+
+.bt-reject {
+    position: absolute;
+    height: 40px;
+    top: 2px;
+    right: 5px;
+}
+
+.bt-reject:hover {
+    position: absolute;
+    height: 40px;
+    top: 2px;
+    right: 5px;
+    filter: brightness(1.2);
+}
+
+/*数字探し独自の部分*/
+#button-container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.number-button {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #ccc;
+    border: none;
+    border-radius: 5px;
+}
+
+.clicked {
+    background-color: #ffcc00;
+}

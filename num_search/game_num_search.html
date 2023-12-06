@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <!-- jQuery読み込み -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+
+    <!-- キャッシュ対策 -->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>数字探し</title>
+    <link href="style_num_search.css" rel="stylesheet">
+
+    <script src="script_num_search.js"></script>
+</head>
+
+<body>
+    <div class="image" alt="">
+        <img src="../img/back_DS.JPG" alt="">
+    </div>
+
+    <div class="left">
+        <div id="title">
+            <h1>
+                <span class="jpn">数字探しゲーム</span>
+                <span class="eng">Number Search Game</span>
+            </h1>
+            <a style="font-size:25px" class="jpn">難しさを選んでください。</a>
+            <a style="font-size:25px" class="eng">Select difficulty.</a>
+            <h3>
+                <span class="jpn">かんたん：1~10の数字<br>目標タイム (Rank S ボーダー)<br>8.0秒</span>
+                <span class="eng">Easy：Numbers 1 to 10<br>Target time (Border of Rank S) 8.0sec</span>
+            </h3>
+            <h3>
+                <span class="jpn">ふつう：1~20の数字<br>目標タイム (Rank S ボーダー)<br>18.0秒</span>
+                <span class="eng">Normal：Numbers 1 to 20<br>Target time (Border of Rank S) 18.0sec</span>
+            </h3>
+            <h3>
+                <span class="jpn">むずかしい：1~30の数字<br>目標タイム (Rank S ボーダー)<br>28.0秒</span>
+                <span class="eng">Hard：Numbers 1 to 30<br>Target time (Border of Rank S) 28.0sec</span>
+            </h3>
+        </div>
+    </div>
+
+    <div class="right">
+        <!-- 難易度表示部 #problems -->
+        <div id="dispDifficulty" style="display: none;"></div>
+        <!-- 最初の画面 #initial_display -->
+        <div class="initial_display">
+            <button class="bt-difficulty" id="startButton_e">
+                <span class="jpn">かんたん</span>
+                <span class="eng">Easy</span>
+            </button><br><br>
+            <button class="bt-difficulty" id="startButton_n">
+                <span class="jpn">ふつう</span>
+                <span class="eng">Normal</span>
+            </button><br><br>
+            <button class="bt-difficulty" id="startButton_h">
+                <span class="jpn">むずかしい</span>
+                <span class="eng">Hard</span>
+            </button><br>
+
+        </div>
+
+    </div>
+    <div class="head_l">
+        <span class="jpn">数字探しゲーム</span>
+        <span class="eng">Number Search Game</span>
+    </div>
+    <div class="head_r">
+        <div class="initial_display">
+            <img src="../img/buttons/Back.JPG" class="bt-back" id="backButton" alt="">
+            <img src="../img/buttons/Rules.JPG" class="bt-describe" alt="">
+        </div>
+
+    </div>
+
+    <div class="game_l" style="display: none;">
+        <!-- 指示表示部 #problems -->
+        <div id="problems" style="display: none;"></div>
+        <div id="order" style="display: none;">
+            <span class="jpn">数字を見つけましょう！</span>
+            <span class="eng">Let's find the numbers!</span>
+        </div>
+        <!-- 結果表示部-->
+        <div id="item_time" style="display: none;">
+            <img id="img_time" alt="" src="../img/result/time.JPG">
+        </div>
+        <div id="cleartime"></div>
+        <div id="item_difficulty" style="display: none;">
+            <img id="img_difficulty" alt="" src="../img/result/difficulty.JPG">
+        </div>
+        <div id="difficultyname"></div>
+        <div id="item_comparetime" style="display: none;">
+            <img id="img_comparetime" alt="" src="../img/result/compare_target_time.JPG">
+        </div>
+        <div id="comparetime"></div>
+        <div id="evaluation"></div>
+    </div>
+    <div class="game_r" style="display:none;">
+        <!-- 中断ボタンと終了ボタン #rejectButton -->
+        <img src="../img/buttons/Reject.JPG" class="bt-reject" id="rejectButton" style="display: none;" alt="">
+        <img src="../img/buttons/Finish.JPG" class="bt-reject" id="finishButton" style="display: none;" alt="">
+        <!--ゲーム画面-->
+        <div id="button-container">
+            <div id="number-buttons-container"></div>
+            <div id="timer-container"></div>
+        </div>
+
+        <!-- ランク表示画面 #rank -->
+        <div id="rank" style="display:none;">
+            <br><br><br>
+            <img id="img_result" alt="" src="../img/result/rank.JPG">
+            <div id="img_rank"></div>
+        </div>
+        <!-- 不正解・終了表示 #info-game -->
+        <div id="info_game"></div>
+    </div>
+
+    <!-- 言語選択ボタン .language, #sJa, #sEn -->
+    <div class="language">
+        <input type="radio" name="langBtn" id="sJa" value="jpn" checked>
+        <label for="sJa">Jpn</label>
+        <br>
+        <input type="radio" name="langBtn" id="sEn" value="eng">
+        <label for="sEn">Eng</label>
+    </div>
+
+    <!-- 音声  -->
+    <audio src="mp3/正解.mp3" id="correct" preload="auto">
+    </audio>
+    <audio src="mp3/不正解.mp3" id="miss" preload="auto">
+    </audio>
+    <audio src="mp3/リザルト1.mp3" id="result-1" preload="auto">
+    </audio>
+    <audio src="mp3/決定ボタンを押す2.mp3" id="dission-button-2" preload="auto">
+    </audio>
+    <audio src="mp3/決定ボタンを押す48.mp3" id="dission-button-48" preload="auto">
+    </audio>
+    <audio src="mp3/カウントダウン3回.mp3" id="countdown-3times" preload="auto">
+    </audio>
+    <audio src="mp3/result2.mp3" id="result-2" preload="auto">
+    </audio>
+    <audio src="mp3/finish.mp3" id="finish" preload="auto">
+    </audio>
+
+</body>
+
+</html>

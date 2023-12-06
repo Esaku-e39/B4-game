@@ -1,0 +1,153 @@
+body {
+    text-align: center;
+}
+
+/* button {
+    margin-top: 10px;
+} */
+
+.image {
+    width: 960px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.left {
+    background: #ffffff;
+    width: 334px;
+    height: 403px;
+    position: absolute;
+    left: 70px;
+    top: 181px;
+    overflow: auto;
+}
+
+.right {
+    background: #ffffff;
+    width: 334px;
+    height: 403px;
+    position: absolute;
+    left: 556px;
+    top: 181px;
+    overflow: auto;
+}
+
+.head_l {
+    vertical-align: middle;
+    text-align: left;
+    background: #e4aa53;
+    width: 334px;
+    height: 45px;
+    position: absolute;
+    left: 70px;
+    top: 136px;
+    overflow: none;
+    color: #ffd494;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.head_r {
+    vertical-align: middle;
+    text-align: left;
+    background: #e4aa53;
+    width: 334px;
+    height: 45px;
+    position: absolute;
+    left: 556px;
+    top: 136px;
+    overflow: none;
+}
+
+.language {
+    text-align: left;
+    position: absolute;
+    top: 80px;
+    left: 825px;
+    transform: rotate(-90deg);
+}
+
+.jpn {
+    display: block;
+}
+
+.eng {
+    display: none;
+}
+
+.to_game {
+    background: white;
+    color: red;
+    line-height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 15px;
+    width: 180px;
+    height: 70px;
+    left: 50px;
+    border: 3px solid orangered;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    font-family: serif;
+}
+
+.to_game:hover {
+    background: red;
+    color: white;
+    line-height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 15px;
+    width: 180px;
+    height: 70px;
+    left: 50px;
+    border: 3px solid orangered;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    font-family: serif;
+}
+
+.to_description {
+    background: orange;
+    color: white;
+    line-height: 50px;
+    font-size: 30px;
+    margin-top: 15px;
+    width: 80px;
+    height: 70px;
+    border: 3px solid orangered;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    font-family: serif;
+}
+
+.to_description:hover {
+    background: red;
+    color: white;
+    line-height: 50px;
+    font-size: 30px;
+    margin-top: 15px;
+    width: 80px;
+    height: 70px;
+    border: 3px solid orangered;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    font-family: serif;
+}
+
+.bt-next {
+    position: absolute;
+    height: 40px;
+    top: 2px;
+    right: 5px;
+}
+
+.bt-next:hover {
+    position: absolute;
+    height: 40px;
+    top: 2px;
+    right: 5px;
+    filter: brightness(1.2);
+}

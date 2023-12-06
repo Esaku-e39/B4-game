@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <!-- jQuery読み込み -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+
+    <!-- キャッシュ対策 -->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>瞬発力診断テスト</title>
+    <link href="style_react_speed.css" rel="stylesheet">
+
+    <script src="script_react_speed.js"></script>
+</head>
+
+<body>
+    <div class="image" alt="">
+        <img src="../img/back_DS.JPG" alt="">
+    </div>
+
+    <!---------------------------------------------------------------------------------------------------------------------------->
+    <div class="left">
+        <div id="title">
+            <h1>
+                <span class="jpn">瞬発力診断テスト</span>
+                <span class="eng">react speed test</span>
+            </h1>
+            <a style="font-size:25px" class="jpn">難しさを選んでください。</a>
+            <a style="font-size:25px" class="eng">Select difficulty.</a><br>
+            <a style="font-size:20px" class="jpn">~難易度ごとのSランクボーダー~</a>
+            <a style="font-size:20px" class="eng">~S rank border for each level~</a>
+            <a style="font-size:20px" class="jpn">かんたん: 19 Points</a>
+            <a style="font-size:20px" class="eng">Easy: 19 Points</a>
+            <a style="font-size:20px" class="jpn">ふつう: 17 Points</a>
+            <a style="font-size:20px" class="eng">normal: 17 Points</a>
+            <a style="font-size:20px" class="jpn">難しい: 12 Points</a>
+            <a style="font-size:20px" class="eng">hard: 12 Points</a>
+        </div>
+        <!-- 終了後リザルト表示 #result -->
+        <div id="result" style="display: none;">
+            <div id="result-c">
+                <img id="img_result-c" alt="" src="../img/result/correct.JPG">
+                <div id="text_result-c"></div>
+            </div>
+            <div id="result-p" style="display: none;">
+                <img id="img_result-p" alt="" src="../img/result/penalty.JPG">
+                <div id="text_result-p"></div>
+            </div>
+            <div id="result-r" style="display: none;">
+                <img id="img_result-r" alt="" src="../img/result/result.JPG">
+                <div id="text_result-r"></div>
+            </div>
+        </div>
+    </div>
+    <!---------------------------------------------------------------------------------------------------------------------------->
+    <div class="right">
+        <!-- 難易度表示部 #problems -->
+        <div id="dispDifficulty" style="display: none;"></div>
+        <!-- 最初の画面 #initial_display -->
+        <div class="initial_display">
+            <button class="bt-difficulty" id="startButton_e">
+                <span class="jpn">かんたん</span>
+                <span class="eng">Easy</span>
+            </button><br><br>
+            <button class="bt-difficulty" id="startButton_n">
+                <span class="jpn">ふつう</span>
+                <span class="eng">Normal</span>
+            </button><br><br>
+            <button class="bt-difficulty" id="startButton_h">
+                <span class="jpn">むずかしい</span>
+                <span class="eng">Hard</span>
+            </button><br>
+        </div>
+
+        <!-- ランク表示画面 #rank -->
+        <div id="rank" style="display:none;">
+            <img class="img_result" alt="" src="../img/result/rank.JPG">
+            <div id="img_rank"></div>
+        </div>
+    </div>
+
+    <!---------------------------------------------------------------------------------------------------------------------------->
+    <div class="head_l">
+        <span class="jpn">瞬発力診断テスト</span>
+        <span class="eng">react speed test</span>
+
+    </div>
+    <!---------------------------------------------------------------------------------------------------------------------------->
+    <div class="head_r">
+        <div class="initial_display">
+            <img src="../img/buttons/Back.JPG" class="bt-back" id="backButton" alt="">
+            <img src="../img/buttons/Rules.JPG" class="bt-describe" alt="">
+        </div>
+
+        <img src="../img/buttons/Finish.JPG" class="bt-reject" id="finishButton" style="display: none;" alt="">
+    </div>
+
+    <!---------------------------------------------------------------------------------------------------------------------------->
+    <!---------------------------------------------------------------------------------------------------------------------------->
+    <div class="game_l" style="display: none;">
+        <!-- 問題表示部 #problems -->
+        <div id="problems" style="display: none;"></div>
+        <div id="problems_hard" style="display: none;"></div>
+        <div id="timer-container"></div>
+    </div>
+    <!---------------------------------------------------------------------------------------------------------------------------->
+    <div class="game_r" style="display:none;">
+        <!-- 中断ボタン #rejectButton -->
+        <img src="../img/buttons/Reject.JPG" class="bt-reject" id="rejectButton" style="display: none;" alt="">
+
+        <!-- 解答入力部 #answer -->
+        <div id="answer" style="display: none;"></div>
+        <!-- 不正解・終了表示 #info-game -->
+        <div id="judge"></div>
+        <div id="info_game"></div>
+    </div>
+
+    <!---------------------------------------------------------------------------------------------------------------------------->
+    <!-- 音声  -->
+    <audio src="mp3/correct.mp3" id="correct" preload="auto"></audio>
+    <audio src="mp3/miss.mp3" id="miss" preload="auto"></audio>
+    <audio src="mp3/finish.mp3" id="fin-sound" preload="auto"></audio>
+    <audio src="mp3/3counts.mp3" id="count-low" preload="auto"></audio>
+    <audio src="mp3/button.mp3" id="bt-sound" preload="auto"></audio>
+    <audio src="mp3/button-2.mp3" id="bt-sound2" preload="auto"></audio>
+    <audio src="mp3/result.mp3" id="result-sound" preload="auto"></audio>
+    <audio src="mp3/result2.mp3" id="result-sound2" preload="auto"></audio>
+
+
+    <!-- 言語選択ボタン .language, #sJa, #sEn -->
+    <div class="language">
+        <input type="radio" name="langBtn" id="sJa" value="jpn" checked>
+        <label for="sJa">Jpn</label>
+        <br>
+        <input type="radio" name="langBtn" id="sEn" value="eng">
+        <label for="sEn">Eng</label>
+    </div>
+</body>
+
+</html>

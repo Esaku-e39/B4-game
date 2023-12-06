@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <!-- jQuery読み込み -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+
+    <!-- キャッシュ対策 -->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>瞬発力診断テスト-説明</title>
+    <link href="description_react_speed.css" rel="stylesheet">
+
+    <script src="description_react_speed.js"></script>
+</head>
+
+<body>
+
+    <div class="image" alt="">
+        <img src="../../img/back_DS.JPG" alt="">
+    </div>
+
+    <!-- ################################################################################################# -->
+    <div id="page1">
+        <div class="left">
+            <div class="script">
+                <p class="jpn">これからあなたの瞬発力を<br>診断するよ！<br>まだまだ若いってことを<br>証明してね！</p>
+                <p class="eng">I will now diagnose <br>your blink of an eye!<br>Prove you're still young!</p>
+            </div>
+        </div>
+
+        <div class="right">
+            <img src="img/a.png" style="margin-top:10px; height:250px; border: solid 2px #ffffff;" alt="">
+        </div>
+
+        <div class="head_l">
+            <span class="jpn">瞬発力診断テスト 1/9</span>
+            <span class="eng">react speed 1/9</span>
+        </div>
+        <div class="head_r">
+            <img src="../../img/buttons/Back.JPG" class="bt-back" onclick="setTimeout(()=>{window.history.back();},150)"
+                alt="">
+            <img src="../../img/buttons/Next.JPG" class="bt-next" id="bt-p1" alt="">
+        </div>
+    </div>
+
+    <!-- ################################################################################################# -->
+    <div id="page2" style="display: none;">
+        <div class="left">
+            <div class="script">
+                <p class="jpn">難易度は３つあるよ！<br>選択するとカウントダウンが<br>始まってゲームスタート！</p>
+                <p class="eng">You can select <br>three difficulty levels!<br>Once selected, a countdown begins and the
+                    game starts!
+                </p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="img/p2.png" style="margin-top:10px; height:300px; border: solid 2px #000;" alt="">
+        </div>
+        <div class="head_l">
+            <span class="jpn">瞬発力診断テスト 2/9</span>
+            <span class="eng">react speed 2/9</span>
+        </div>
+        <div class="head_r">
+            <img src="../../img/buttons/Back.JPG" class="bt-back" onclick="$('#page1').show(); $('#page2').hide();"
+                alt="">
+            <img src="../../img/buttons/Next.JPG" class="bt-next" id="bt-p2" alt="">
+        </div>
+    </div>
+
+    <!-- ################################################################################################# -->
+    <div id="page3" style="display: none;">
+        <div class="left">
+            <div class="script">
+                <p class="jpn">このゲームでは色を使うよ！<br>使う色は左！</p>
+                <p class="eng">In this game, we use colors! <br>The color to use is on the left!
+                </p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="img/color.png" style="margin-top:10px; height:300px; border: solid 2px #000;" alt="">
+        </div>
+        <div class="head_l">
+            <span class="jpn">瞬発力診断テスト 3/9</span>
+            <span class="eng">react speed 3/9</span>
+        </div>
+        <div class="head_r">
+            <img src="../../img/buttons/Back.JPG" class="bt-back" onclick="$('#page2').show(); $('#page3').hide();"
+                alt="">
+            <img src="../../img/buttons/Next.JPG" class="bt-next" id="bt-p3" alt="">
+        </div>
+    </div>
+    <!-- ################################################################################################# -->
+    <div id="page4" style="display: none;">
+        <div class="left">
+            <div class="script">
+                <p class="jpn">＜かんたん＞<br>左の色と同じ色を<br>クリックしてね！</p>
+                <p class="eng">-Easy-<br>Click on the same color as on the left!</p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="img/easy.png" style="margin-top:10px; height:250px; border: solid 2px #ffffff;" alt="">
+        </div>
+        <div class="head_l">
+            <span class="jpn">瞬発力診断テスト 4/9</span>
+            <span class="eng">react speed 4/9</span>
+        </div>
+        <div class="head_r">
+            <img src="../../img/buttons/Back.JPG" class="bt-back" onclick="$('#page3').show(); $('#page4').hide();"
+                alt="">
+            <img src="../../img/buttons/Next.JPG" class="bt-next" id="bt-p4" alt="">
+        </div>
+    </div>
+
+    <!-- ################################################################################################# -->
+    <div id="page5" style="display: none;">
+        <div class="left">
+            <div class="script">
+                <p class="jpn">＜ふつう＞<br>左の文字の色と同じ色をクリックしてね！</p>
+                <p class="eng">-Normal-<br>Click on the color that matches the color of the letters on the left!</p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="img/hard2.png" style="margin-top:10px; height:250px; border: solid 2px #ffffff;" alt="">
+        </div>
+        <div class="head_l">
+            <span class="jpn">瞬発力診断テスト 5/9</span>
+            <span class="eng">react speed 5/9</span>
+        </div>
+        <div class="head_r">
+            <img src="../../img/buttons/Back.JPG" class="bt-back" onclick="$('#page4').show(); $('#page5').hide();"
+                alt="">
+            <img src="../../img/buttons/Next.JPG" class="bt-next" id="bt-p5" alt="">
+        </div>
+    </div>
+
+    <!-- ################################################################################################# -->
+    <div id="page6" style="display: none;">
+        <div class="left">
+            <div class="script">
+                <p class="jpn">＜むずかしい＞<br>左に色付き文字とその上に「color」か「character」が<br>ランダムで表示されるよ。<br>指示に従ってクリックしてね！</p>
+                <p class="eng">-Hard-<br>You'll see colored text on the left and "color" or "character" above it at
+                    random. Click
+                    according to the instructions!</p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="img/hard1.png" style="margin-top:10px; height:180px; border: solid 2px #ffffff;" alt="">
+            <img src="img/hard2.png" style="margin-top:10px; height:180px; border: solid 2px #ffffff;" alt="">
+        </div>
+        <div class="head_l">
+            <span class="jpn">瞬発力診断テスト 6/9</span>
+            <span class="eng">react speed 6/9</span>
+        </div>
+        <div class="head_r">
+            <img src="../../img/buttons/Back.JPG" class="bt-back" onclick="$('#page5').show(); $('#page6').hide();"
+                alt="">
+            <img src="../../img/buttons/Next.JPG" class="bt-next" id="bt-p6" alt="">
+        </div>
+    </div>
+
+    <!-- ################################################################################################# -->
+    <div id="page7" style="display: none;">
+        <div class="left">
+            <div class="script">
+                <p class="jpn">制限時間は20秒！<br>時間内にできるだけたくさん<br>クリックしてね！<br>でも誤答ペナルティもあるから<br>気を付けてね！</p>
+                <p class="eng">The time limit is 20 seconds!
+                    Click as many times as you can within the time limit!<br>
+                    But be careful, because there is a penalty for wrong answers!</p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="img/time.png" style="margin-top:10px; height:250px; border: solid 2px #ffffff;" alt="">
+        </div>
+        <div class="head_l">
+            <span class="jpn">瞬発力診断テスト 7/9</span>
+            <span class="eng">react speed 7/9</span>
+        </div>
+        <div class="head_r">
+            <img src="../../img/buttons/Back.JPG" class="bt-back" onclick="$('#page6').show(); $('#page7').hide();"
+                alt="">
+            <img src="../../img/buttons/Next.JPG" class="bt-next" id="bt-p7" alt="">
+        </div>
+    </div>
+
+    <!-- ################################################################################################# -->
+    <div id="page8" style="display: none;">
+        <div class="left">
+            <div class="script">
+                <p class="jpn">最後にランクについて！<br>それぞれ難易度でD→C→B→A→S<br>の5つのランクがあるよ！<br>Sランクを目指そう！</p>
+                <p class="eng">Finally, about the ranks!<br>On each difficulty level,<br>each rank is divided into <br>D, C, B, A, and S!<br>Let's aim for S rank!</p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="img/graph.png" style="margin-top:10px; height:250px; border: solid 2px #ffffff;" alt="">
+        </div>
+
+        <div class="head_l">
+            <span class="jpn">瞬発力診断テスト 8/9</span>
+            <span class="eng">react speed 8/9</span>
+        </div>
+        <div class="head_r">
+            <img src="../../img/buttons/Back.JPG" class="bt-back" onclick="$('#page7').show(); $('#page8').hide();"
+                alt="">
+            <img src="../../img/buttons/Next.JPG" class="bt-next" id="bt-p8" alt="">
+        </div>
+    </div>
+
+    <!-- ################################################################################################# -->
+    <div id="page9" style="display: none;">
+        <div class="left">
+            <div class="script">
+                <p class="jpn">準備OK?<br>それじゃあ始めよう！</p>
+                <p class="eng">Are you ready? <br>Let's start!</p>
+            </div>
+        </div>
+
+        <div class="right">
+            <button class="bt-difficulty" id="startButton_n">
+                <a class="jpn">ゲーム<br>スタート</a><a class="eng">Start<br>Game</a>
+            </button>
+            <button class="bt-difficulty" id="startButton_h">
+                <a class="jpn">やめる</a><a class="eng">Quit</a>
+            </button>
+        </div>
+        <div class="head_l">
+            <span class="jpn">瞬発力診断テスト 9/9</span>
+            <span class="eng">react speed 9/9</span>
+        </div>
+        <div class="head_r">
+            <img src="../../img/buttons/Back.JPG" class="bt-back" onclick="$('#page8').show(); $('#page9').hide();"
+                alt="">
+        </div>
+    </div>
+
+    <!-- 言語選択ボタン .language, #sJa, #sEn -->
+    <div class="language">
+        <input type="radio" name="langBtn" id="sJa" value="jpn" checked>
+        <label for="sJa">Jpn</label>
+        <br>
+        <input type="radio" name="langBtn" id="sEn" value="eng">
+        <label for="sEn">Eng</label>
+    </div>
+
+    <!-- 音声  -->
+    <audio src="../mp3/correct.mp3" id="correct" preload="auto"></audio>
+    <audio src="../mp3/miss.mp3" id="miss" preload="auto"></audio>
+    <audio src="../mp3/finish.mp3" id="fin-sound" preload="auto"></audio>
+    <audio src="../mp3/3counts.mp3" id="count-low" preload="auto"></audio>
+    <audio src="../mp3/button.mp3" id="bt-sound" preload="auto"></audio>
+    <audio src="../mp3/button-2.mp3" id="bt-sound2" preload="auto"></audio>
+    <audio src="../mp3/result.mp3" id="result-sound" preload="auto"></audio>
+    <audio src="../mp3/result2.mp3" id="result-sound2" preload="auto"></audio>
+</body>
+
+</html>

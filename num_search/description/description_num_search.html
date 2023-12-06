@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <!-- jQuery読み込み -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+
+    <!-- キャッシュ対策 -->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <title>数字探しゲーム-説明</title>
+    <link href="description_num_search.css" rel="stylesheet">
+
+    <script src="description_num_search.js"></script>
+</head>
+
+<body>
+    <div class="image" alt="">
+        <img src="../../img/back_DS.JPG" alt="">
+    </div>
+
+    <!-- ################################################################################################# -->
+    <div id="page1">
+        <div class="left">
+            <div class="script">
+                <p class="jpn">画面に表示されている数字を順にできるだけ早くクリックするゲームです。<br>難易度を選択すると、3カウントの後に数字が表示されます。</p>
+                <p class="eng" style="font-size: 18px">This game is to click the numbers displayed on the screen in order as quickly as possible.<br>When the difficulty level is selected, the numbers appear after the three counts.</p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="img/p1.png" style="margin-top:10px; height:300px; border: solid 2px #000;" alt="">
+        </div>
+        <div class="head_l">
+            <span class="jpn">数字探しゲーム 1/7</span>
+            <span class="eng" style="font-size: 25px">Number Search Game 1/7</span>
+        </div>
+        <div class="head_r">
+            <img src="../../img/buttons/Back.JPG" class="bt-back" id="bt-pp1" alt="">
+            <img src="../../img/buttons/Next.JPG" class="bt-next" id="bt-p1" alt="">
+        </div>
+    </div>
+    <!-- ################################################################################################# -->
+
+    <div id="page2" style="display: none;">
+        <div class="left">
+            <div class="script">
+                <p class="jpn">＜かんたん＞<br>1~10の数字が出題されます。<br>目標タイムは8.0秒です。</p>
+                <p class="eng">「Easy」<br>Numbers from 1~10 are given.<br>Target time is 8.0sec.</p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="img/p2.png" style="margin-top:10px; height:100px; border: solid 2px #000;" alt="">
+        </div>
+        <div class="head_l">
+            <span class="jpn">数字探しゲーム 2/7</span>
+            <span class="eng" style="font-size: 25px">Number Search Game 2/7</span>
+        </div>
+        <div class="head_r">
+            <img src="../../img/buttons/Back.JPG" class="bt-back" id="bt-pp2" alt="">
+            <img src="../../img/buttons/Next.JPG" class="bt-next" id="bt-p2" alt="">
+        </div>
+    </div>
+    <!-- ################################################################################################# -->
+
+    <div id="page3" style="display: none;">
+        <div class="left">
+            <div class="script">
+                <p class="jpn">＜ふつう＞<br>1~20の数字が出題されます。<br>目標タイムは18.0秒です。</p>
+                <p class="eng">「Normal」<br>Numbers from 1~20 are given.<br>Target time is 18.0sec.</p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="img/p3.png" style="margin-top:10px; height:200px; border: solid 2px #000;" alt="">
+        </div>
+        <div class="head_l">
+            <span class="jpn">数字探しゲーム 3/7</span>
+            <span class="eng" style="font-size: 25px">Number Search Game 3/7</span>
+        </div>
+        <div class="head_r">
+            <img src="../../img/buttons/Back.JPG" class="bt-back" id="bt-pp3" alt="">
+            <img src="../../img/buttons/Next.JPG" class="bt-next" id="bt-p3" alt="">
+        </div>
+    </div>
+    <!-- ################################################################################################# -->
+
+    <div id="page4" style="display: none;">
+        <div class="left">
+            <div class="script">
+                <p class="jpn">＜むずかしい＞<br>1~30の数字が出題されます。<br>目標タイムは28.0秒です。<br>※難易度むずかしいではスクロールしないと一部の数字が見えません。</p>
+                <p class="eng">「Hard」<br>Numbers from 1~30 are given.<br>Target time is 28.0sec.<br>※In the hard difficulty level, you have to scroll to see some of the numbers.</p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="img/p4.png" style="margin-top:10px; height:300px; border: solid 2px #000;" alt="">
+        </div>
+        <div class="head_l">
+            <span class="jpn">数字探しゲーム 4/7</span>
+            <span class="eng" style="font-size: 25px">Number Search Game 4/7</span>
+        </div>
+        <div class="head_r">
+            <img src="../../img/buttons/Back.JPG" class="bt-back" id="bt-pp4" alt="">
+            <img src="../../img/buttons/Next.JPG" class="bt-next" id="bt-p4" alt="">
+        </div>
+    </div>
+    <!-- ################################################################################################# -->
+
+    <div id="page5" style="display: none;">
+        <div class="left">
+            <div class="script">
+                <p class="jpn">画面上の数字を直接クリックしてください。<br>正しい順番であれば色が変わります。そうでなければ色は変わりません。</p>
+                <p class="eng">Click directly on the numbers on the screen.<br>If they are in the correct order, they will change color. If not, the color will not change.</p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="img/p5.png" style="margin-top:10px; height:300px; border: solid 2px #000;" alt="">
+        </div>
+        <div class="head_l">
+            <span class="jpn">数字探しゲーム 5/7</span>
+            <span class="eng" style="font-size: 25px">Number Search Game 5/7</span>
+        </div>
+        <div class="head_r">
+            <img src="../../img/buttons/Back.JPG" class="bt-back" id="bt-pp5" alt="">
+            <img src="../../img/buttons/Next.JPG" class="bt-next" id="bt-p5" alt="">
+        </div>
+    </div>
+    <!-- ################################################################################################# -->
+
+    <div id="page6" style="display: none;">
+        <div class="left">
+            <div class="script">
+                <p class="jpn">全ての数字の色が変わればクリアです。<br>Timeをもとに, Rank (S>A>B>C>D)が決定されます。<br>目標タイムを上回ればSランクです！</p>
+                <p class="eng">The game is cleared when all numbers change color.<br>Rank (S>A>B>C>D) is determined based on Time.<br>If the target time is exceeded, it is Rank S!</p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="img/p6.png" style="margin-top:10px; height:200px; border: solid 2px #000;" alt="">
+        </div>
+        <div class="head_l">
+            <span class="jpn">数字探しゲーム 6/7</span>
+            <span class="eng" style="font-size: 25px">Number Search Game 6/7</span>
+        </div>
+        <div class="head_r">
+            <img src="../../img/buttons/Back.JPG" class="bt-back" id="bt-pp6" alt="">
+            <img src="../../img/buttons/Next.JPG" class="bt-next" id="bt-p6" alt="">
+        </div>
+    </div>
+    <!-- ################################################################################################# -->
+
+    <div id="page7" style="display: none;">
+        <div class="left">
+            <div class="script">
+                <p class="jpn">目標タイムより早く数字を見つけられるように頑張りましょう！</p>
+                <p class="eng">Do your best to find the numbers faster than target time!</p>
+            </div>
+        </div>
+        <div class="right">
+            <button class="bt-difficulty" id="startButton_n">
+                <a class="jpn">ゲーム<br>スタート</a><a class="eng">Start<br>Game</a>
+            </button>
+            <button class="bt-difficulty" id="startButton_h">
+                <a class="jpn">やめる</a><a class="eng">Quit</a>
+            </button>
+        </div>
+        <div class="head_l">
+            <span class="jpn">数字探しゲーム 7/7</span>
+            <span class="eng" style="font-size: 25px">Number Search Game 7/7</span>
+        </div>
+        <div class="head_r">
+            <img src="../../img/buttons/Back.JPG" class="bt-back" id="bt-pp7" alt="">
+        </div>
+    </div>
+    <!-- ################################################################################################# -->
+
+    <!-- 言語選択ボタン .language, #sJa, #sEn -->
+    <div class="language">
+        <input type="radio" name="langBtn" id="sJa" value="jpn" checked>
+        <label for="sJa">Jpn</label>
+        <br>
+        <input type="radio" name="langBtn" id="sEn" value="eng">
+        <label for="sEn">Eng</label>
+    </div>
+
+    <!-- 音声  -->
+    <audio src="../mp3/正解.mp3" id="correct" preload="auto">
+    </audio>
+    <audio src="../mp3/不正解.mp3" id="miss" preload="auto">
+    </audio>
+    <audio src="../mp3/リザルト1.mp3" id="result-1" preload="auto">
+    </audio>
+    <audio src="../mp3/決定ボタンを押す2.mp3" id="dission-button-2" preload="auto">
+    </audio>
+    <audio src="../mp3/決定ボタンを押す48.mp3" id="dission-button-48" preload="auto">
+    </audio>
+    <audio src="../mp3/カウントダウン3回.mp3" id="countdown-3times" preload="auto">
+    </audio>
+
+</body>
+
+</html>

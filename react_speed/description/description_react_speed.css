@@ -1,0 +1,144 @@
+body {
+    text-align: center;
+}
+
+button {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.image {
+    width: 960px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.left {
+    background: #ffffff;
+    width: 334px;
+    height: 403px;
+    position: absolute;
+    left: 70px;
+    top: 181px;
+    overflow: auto;
+}
+
+.right {
+    background: #ffffff;
+    width: 334px;
+    height: 403px;
+    position: absolute;
+    left: 556px;
+    top: 181px;
+    overflow: auto;
+}
+
+.head_l {
+    vertical-align: middle;
+    text-align: left;
+    background: #728cff;
+    width: 334px;
+    height: 45px;
+    position: absolute;
+    left: 70px;
+    top: 136px;
+    overflow: none;
+    color: #b7c4ff;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.head_r {
+    vertical-align: middle;
+    text-align: left;
+    background: #728cff;
+    width: 334px;
+    height: 45px;
+    position: absolute;
+    left: 556px;
+    top: 136px;
+    overflow: none;
+}
+
+.language {
+    text-align: left;
+    position: absolute;
+    top: 80px;
+    left: 825px;
+    transform: rotate(-90deg);
+}
+
+.jpn {
+    display: block;
+}
+
+.eng {
+    display: none;
+}
+
+.script {
+    margin: 10px;
+    height: 200px;
+    border: solid 2px #000;
+    border-radius: 1rem;
+    text-align: left;
+    font-size: 20px;
+    overflow: none;
+}
+
+.bt-back {
+    position: absolute;
+    height: 40px;
+    top: 2px;
+    left: 5px;
+}
+
+.bt-back:hover {
+    position: absolute;
+    height: 40px;
+    top: 2px;
+    left: 5px;
+    filter: brightness(2);
+}
+
+.bt-next {
+    position: absolute;
+    height: 40px;
+    top: 2px;
+    right: 5px;
+}
+
+.bt-next:hover {
+    position: absolute;
+    height: 40px;
+    top: 2px;
+    right: 5px;
+    filter: brightness(1.2);
+}
+
+.bt-difficulty {
+    background: #ffffff;
+    border: double 2px black;
+    font-size: 30px;
+    font-weight: 550;
+    margin-top: 20px;
+    width: 230px;
+    height: 85px;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+}
+
+.bt-difficulty:hover {
+    background: #ffffff;
+    color: red;
+    border: double 2px red;
+    font-size: 30px;
+    font-weight: 550;
+    margin-top: 20px;
+    width: 230px;
+    height: 85px;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0);
+}

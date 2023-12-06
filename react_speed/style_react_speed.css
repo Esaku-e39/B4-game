@@ -1,0 +1,254 @@
+body {
+    text-align: center;
+}
+
+.image {
+    width: 960px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.left {
+    background: #ffffff;
+    width: 334px;
+    height: 403px;
+    position: absolute;
+    left: 70px;
+    top: 181px;
+    overflow: auto;
+}
+
+.right {
+    background: #ffffff;
+    width: 334px;
+    height: 403px;
+    position: absolute;
+    left: 556px;
+    top: 181px;
+    overflow: auto;
+}
+
+.head_l {
+    vertical-align: middle;
+    text-align: left;
+    background: #728cff;
+    width: 334px;
+    height: 45px;
+    position: absolute;
+    left: 70px;
+    top: 136px;
+    overflow: none;
+    color: #b7c4ff;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.head_r {
+    vertical-align: middle;
+    text-align: left;
+    background: #728cff;
+    width: 334px;
+    height: 45px;
+    position: absolute;
+    left: 556px;
+    top: 136px;
+    overflow: none;
+}
+
+.game_l {
+    background: #ffffff;
+    width: 334px;
+    height: 448px;
+    position: absolute;
+    left: 70px;
+    top: 136px;
+    overflow-y: auto;
+}
+
+.game_r {
+    background: #ffffff;
+    width: 334px;
+    height: 448px;
+    position: absolute;
+    left: 556px;
+    top: 136px;
+    overflow-y: auto;
+}
+
+.language {
+    text-align: left;
+    position: absolute;
+    top: 80px;
+    left: 825px;
+    transform: rotate(-90deg);
+}
+
+.jpn {
+    display: block;
+}
+
+.eng {
+    display: none;
+}
+
+#problems {
+    font-size: 24px;
+    line-height: 70px;
+}
+
+#problems_hard {
+    font-size: 60px;
+    line-height: 70px;
+    -webkit-text-stroke: 0.1px #000;
+}
+
+#answer {
+    width: 300px;
+    margin-top: 50px;
+    font-size: 80px;
+}
+
+#judge {
+    font-size: 10px;
+    line-height: 0px;
+    margin-top:0px;
+}
+
+#info_game {
+    font-size: 20px;
+    line-height: 40px;
+    margin-top:0px;
+}
+
+#result {
+    font-size: 24px;
+}
+
+.img_result {
+    margin-top: 10px;
+    width: 334px;
+}
+
+#rejectButton {
+    margin: 10px;
+}
+#img_result-c{
+    margin-top:10px;
+    width:334px;
+}
+#img_result-p{
+    width:334px;
+}
+#img_result-r{
+    margin-top: 5px;
+    width:334px;
+}
+#text_result-r{
+    margin-top: 5px;
+    font-size: 40px;
+}
+
+.correct {
+    font-weight: bold;
+    font-size: 40px;
+    color: #22aa22;
+}
+
+.incorrect {
+    font-weight: bold;
+    font-size: 40px;
+    color: #cc2222;
+}
+
+.img_ans{
+    -webkit-user-drag: none;
+    margin: 3px;
+    width: 75px;
+    border: solid 1px #444;
+}
+.img_prob{
+    margin-top: 10px;
+    width: 250px;
+}
+.correct{
+    font-weight:bold;
+    font-size:40px;
+    color:#22aa22;
+}
+.incorrect{
+    font-weight:bold;
+    font-size:40px;
+    color:#cc2222;
+}
+
+.bt-difficulty {
+    background: #ffffff;
+    border: double 2px black;
+    font-size: 30px;
+    font-weight: 550;
+    margin-top: 20px;
+    width: 230px;
+    height: 85px;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+}
+
+.bt-difficulty:hover {
+    background: #ffffff;
+    color: red;
+    border: double 2px red;
+    font-size: 30px;
+    font-weight: 550;
+    margin-top: 20px;
+    width: 230px;
+    height: 85px;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0);
+}
+
+.bt-back {
+    position: absolute;
+    height: 40px;
+    top: 2px;
+    left: 5px;
+}
+
+.bt-back:hover {
+    position: absolute;
+    height: 40px;
+    top: 2px;
+    left: 5px;
+    filter: brightness(2);
+}
+
+.bt-describe {
+    position: absolute;
+    height: 40px;
+    top: 2px;
+    right: 5px;
+}
+
+.bt-describe:hover {
+    position: absolute;
+    height: 40px;
+    top: 2px;
+    right: 5px;
+    filter: brightness(1.2);
+}
+
+.bt-reject {
+    position: absolute;
+    height: 40px;
+    top: 2px;
+    right: 5px;
+}
+
+.bt-reject:hover {
+    position: absolute;
+    height: 40px;
+    top: 2px;
+    right: 5px;
+    filter: brightness(1.2);
+}

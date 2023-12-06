@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <!-- jQuery読み込み -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+
+    <!-- キャッシュ対策 -->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>スピード計算20-説明</title>
+    <link href="description_calculate.css" rel="stylesheet">
+
+    <script src="description_calculate.js"></script>
+</head>
+
+<body>
+
+    <div class="image" alt="">
+        <img src="../../img/back_DS.JPG" alt="">
+    </div>
+
+    <!-- ################################################################################################# -->
+    <div id="page1">
+        <div class="left">
+            <div class="script">
+                <p class="jpn">20問ある計算問題を、できるだけ早く全て解くゲームです。</p>
+                <p class="eng">The goal of this game is to calculate 20 problems as fast as you can.</p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="img/p1.png" style="margin-top:10px; height:300px; border: solid 2px #000;" alt="">
+        </div>
+        <div class="head_l">
+            <span class="jpn">計算20 1/8</span>
+            <span class="eng">Calculate 20 1/8</span>
+        </div>
+        <div class="head_r">
+            <img src="../../img/buttons/Back.JPG" class="bt-back" onclick="setTimeout(()=>{window.history.back();},150)"
+                alt="">
+            <img src="../../img/buttons/Next.JPG" class="bt-next" id="bt-p1" alt="">
+        </div>
+    </div>
+
+    <!-- ################################################################################################# -->
+    <div id="page2" style="display: none;">
+        <div class="left">
+            <div class="script">
+                <p class="jpn">難易度を選択すると、3カウントの後に問題が20問表示されます。</p>
+                <p class="eng">Choose the difficulty to play, and 20 problems would be shown 3 seconds after you select.
+                </p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="img/p2.png" style="margin-top:10px; height:300px; border: solid 2px #000;" alt="">
+        </div>
+        <div class="head_l">
+            <span class="jpn">計算20 2/8</span>
+            <span class="eng">Calculate 20 2/8</span>
+        </div>
+        <div class="head_r">
+            <img src="../../img/buttons/Back.JPG" class="bt-back" onclick="$('#page1').show(); $('#page2').hide();"
+                alt="">
+            <img src="../../img/buttons/Next.JPG" class="bt-next" id="bt-p2" alt="">
+        </div>
+    </div>
+
+    <!-- ################################################################################################# -->
+    <div id="page3" style="display: none;">
+        <div class="left">
+            <div class="script">
+                <p class="jpn">＜かんたん＞<br>一桁の足し算だけが出題されます。</p>
+                <p class="eng">-Easy-<br>Only the addition of single digits would be asked.</p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="img/p1.png" style="margin-top:10px; height:300px; border: solid 2px #000;" alt="">
+        </div>
+        <div class="head_l">
+            <span class="jpn">計算20 3/8</span>
+            <span class="eng">Calculate 20 3/8</span>
+        </div>
+        <div class="head_r">
+            <img src="../../img/buttons/Back.JPG" class="bt-back" onclick="$('#page2').show(); $('#page3').hide();"
+                alt="">
+            <img src="../../img/buttons/Next.JPG" class="bt-next" id="bt-p3" alt="">
+        </div>
+    </div>
+
+    <!-- ################################################################################################# -->
+    <div id="page4" style="display: none;">
+        <div class="left">
+            <div class="script">
+                <p class="jpn">＜ふつう＞<br>二桁の足し算や引き算、一桁同士の掛け算が出題されます。</p>
+                <p class="eng">-Normal-<br>The addition or substraction including two digits, or multiplication of
+                    single digits would be asked.</p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="img/p4.png" style="margin-top:10px; height:300px; border: solid 2px #000;" alt="">
+        </div>
+        <div class="head_l">
+            <span class="jpn">計算20 4/8</span>
+            <span class="eng">Calculate 20 4/8</span>
+        </div>
+        <div class="head_r">
+            <img src="../../img/buttons/Back.JPG" class="bt-back" onclick="$('#page3').show(); $('#page4').hide();"
+                alt="">
+            <img src="../../img/buttons/Next.JPG" class="bt-next" id="bt-p4" alt="">
+        </div>
+    </div>
+
+    <!-- ################################################################################################# -->
+    <div id="page5" style="display: none;">
+        <div class="left">
+            <div class="script">
+                <p class="jpn">＜むずかしい＞<br>3桁の計算も出題されます。</p>
+                <p class="eng">-Hard-<br>Calculation of three digits would be asked.</p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="img/p5.png" style="margin-top:10px; height:300px; border: solid 2px #000;" alt="">
+        </div>
+        <div class="head_l">
+            <span class="jpn">計算20 5/8</span>
+            <span class="eng">Calculate 20 5/8</span>
+        </div>
+        <div class="head_r">
+            <img src="../../img/buttons/Back.JPG" class="bt-back" onclick="$('#page4').show(); $('#page5').hide();"
+                alt="">
+            <img src="../../img/buttons/Next.JPG" class="bt-next" id="bt-p5" alt="">
+        </div>
+    </div>
+
+    <!-- ################################################################################################# -->
+    <div id="page6" style="display: none;">
+        <div class="left">
+            <div class="script">
+                <p class="jpn">解答欄にキーボードで入力してください。<br>正解するまでは次の問題に移れません。</p>
+                <p class="eng">Type your answer on your keyboard.<br>You can't answer the next question unless answering
+                    the current problem correctly.</p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="img/p3.png" style="margin-top:10px; height:300px; border: solid 2px #000;" alt="">
+        </div>
+        <div class="head_l">
+            <span class="jpn">計算20 6/8</span>
+            <span class="eng">Calculate 20 6/8</span>
+        </div>
+        <div class="head_r">
+            <img src="../../img/buttons/Back.JPG" class="bt-back" onclick="$('#page5').show(); $('#page6').hide();"
+                alt="">
+            <img src="../../img/buttons/Next.JPG" class="bt-next" id="bt-p6" alt="">
+        </div>
+    </div>
+
+    <!-- ################################################################################################# -->
+    <div id="page7" style="display: none;">
+        <div class="left">
+            <div class="script">
+                <p class="jpn">間違えるとペナルティが加算されます。<br>Total Timeをもとに、Rank(S>A>B>C>D)が決定されます。</p>
+                <p class="eng">Penalty time will be added when you make a wrong answer.<br>Rank (S>A>B>C>D) would be determined based on your Total Time.</p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="img/p6.png" style="margin-top:10px; height:200px; border: solid 2px #000;" alt=""><br>
+            <img src="img/p7.png" style="margin-top:10px; height:150px; border: solid 2px #000;" alt="">
+        </div>
+        <div class="head_l">
+            <span class="jpn">計算20 7/8</span>
+            <span class="eng">Calculate 20 7/8</span>
+        </div>
+        <div class="head_r">
+            <img src="../../img/buttons/Back.JPG" class="bt-back" onclick="$('#page6').show(); $('#page7').hide();"
+                alt="">
+            <img src="../../img/buttons/Next.JPG" class="bt-next" id="bt-p7" alt="">
+        </div>
+    </div>
+
+    <!-- ################################################################################################# -->
+    <div id="page8" style="display: none;">
+        <div class="left">
+            <div class="script">
+                <p class="jpn">できるだけ早く解ききれるよう頑張りましょう！</p>
+                <p class="eng">Do your best to beat a fastest record!</p>
+            </div>
+        </div>
+        <div class="right">
+            <button class="bt-difficulty" id="startButton_n">
+                <a class="jpn">ゲーム<br>スタート</a><a class="eng">Start<br>Game</a>
+            </button>
+            <button class="bt-difficulty" id="startButton_h">
+                <a class="jpn">やめる</a><a class="eng">Quit</a>
+            </button>
+        </div>
+        <div class="head_l">
+            <span class="jpn">計算20 8/8</span>
+            <span class="eng">Calculate 20 8/8</span>
+        </div>
+        <div class="head_r">
+            <img src="../../img/buttons/Back.JPG" class="bt-back" onclick="$('#page7').show(); $('#page8').hide();"
+                alt="">
+        </div>
+    </div>
+
+    <!-- 言語選択ボタン .language, #sJa, #sEn -->
+    <div class="language">
+        <input type="radio" name="langBtn" id="sJa" value="jpn" checked>
+        <label for="sJa">Jpn</label>
+        <br>
+        <input type="radio" name="langBtn" id="sEn" value="eng">
+        <label for="sEn">Eng</label>
+    </div>
+
+    <!-- 音声  -->
+    <audio src="../mp3/correct.mp3" id="correct" preload="auto"></audio>
+    <audio src="../mp3/miss.mp3" id="miss" preload="auto"></audio>
+    <audio src="../mp3/finish.mp3" id="fin-sound" preload="auto"></audio>
+    <audio src="../mp3/3counts.mp3" id="count-low" preload="auto"></audio>
+    <audio src="../mp3/button.mp3" id="bt-sound" preload="auto"></audio>
+    <audio src="../mp3/button-2.mp3" id="bt-sound2" preload="auto"></audio>
+    <audio src="../mp3/result.mp3" id="result-sound" preload="auto"></audio>
+    <audio src="../mp3/result2.mp3" id="result-sound2" preload="auto"></audio>
+</body>
+
+</html>
