@@ -128,7 +128,7 @@ $(() => {
         document.getElementById("dission-button-48").currentTime = 0;//この行は連打でも反応する用です
         document.getElementById("dission-button-48").play();
         setTimeout(() => {
-            location.href="../../home.html";
+            location.href="../../index.html";
         }, 150);
     });
 

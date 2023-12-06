@@ -68,7 +68,7 @@ $(() => {
         $("#bt-sound").get(0).currentTime = 0; //この行は連打用
         $("#bt-sound").get(0).play();
         setTimeout(() => {
-            setTimeout(() => { location.href = '../../home.html' }, 150);
+            setTimeout(() => { location.href = '../../index.html' }, 150);
         }, 150)
     });
 });

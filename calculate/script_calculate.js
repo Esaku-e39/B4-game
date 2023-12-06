@@ -360,7 +360,7 @@ $(function () {
         $("#bt-sound2").get(0).currentTime = 0; //この行は連打用
         $("#bt-sound2").get(0).play();
         setTimeout(() => {
-            location.href = "../home.html"; // ゲーム選択画面に戻る
+            location.href = "../index.html"; // ゲーム選択画面に戻る
         }, 150);
     })
 
@@ -384,7 +384,7 @@ $(function () {
         $("#bt-sound2").get(0).currentTime = 0; //この行は連打用
         $("#bt-sound2").get(0).play();
         setTimeout(() => {
-            location.href = "../home.html"; // ゲーム選択画面に戻る
+            location.href = "../index.html"; // ゲーム選択画面に戻る
         }, 150);
     });
 
